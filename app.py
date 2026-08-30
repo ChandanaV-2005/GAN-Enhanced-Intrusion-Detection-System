@@ -5,11 +5,14 @@ import matplotlib.pyplot as plt
 import shap
 import sqlite3
 from datetime import datetime
+import os
 # =====================================
 # SQLite Database
 # =====================================
 
 DB_PATH = "Database/ids_history.db"
+
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
 conn = sqlite3.connect(DB_PATH)
 
